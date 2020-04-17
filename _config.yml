@@ -6,3 +6,5 @@ markdown:         kramdown
 highlighter:      rouge
 excerpt_separator: <!--more-->
 
+   url: kurdishblark.github.io
+   baseurl: /KurdishLyricsCorpus
