@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %} 
+</head>
+<body style>
+	<div class="container">
+	<div class="starter-template row">
+		<h1><a href="{{ site.url }}" style="color:black;">Kurdish Folkloric Lyrics Corpus</a></h1>
+		<p class="lead">A collection of oral narratives and songs of generations...</p>
+	</div>
+	<hr>
+		<div class="starter-template row">
+			<p>Title: {{ page.title }}</p>
+			<p>Performer: {{ page.performer }}</p>
+			<p>Dialect: {{ page.dialect }}</p>
+			<p>Audio: </p>
+			<audio controls>
+			  <source src="{{ page.audio }}" type="audio/mpeg">
+			Your browser does not support the audio element.
+			</audio>
+			<p>Text:</p>
+			<!-- <p>{{ page.date | date_to_string }} - {{ page.author }}</p> -->
+			{{ content }}
+		</div>
+	</div>
+</body>
+</html>
