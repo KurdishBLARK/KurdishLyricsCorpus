@@ -6,13 +6,14 @@
 <body style>
 	<div class="container">
 	<div class="starter-template row">
-		<h1><a href="{{ site.url }}" style="color:black;">Kurdish Folkloric Lyrics Corpus</a></h1>
+		<h1><a href="{{ site.baseurl }}" style="color:black;">Kurdish Folkloric Lyrics Corpus</a></h1>
 		<p class="lead">A collection of oral narratives and songs of generations...</p>
 	</div>
 	<hr>
 		<div class="starter-template row">
 			<p>Title: {{ page.title }}</p>
 			<p>Performer: {{ page.performer }}</p>
+			<p>Category: {{ page.categories }}</p>
 			<p>Dialect: {{ page.dialect }}</p>
 			<p>Audio: </p>
 			<audio controls>
@@ -23,6 +24,9 @@
 			<!-- <p>{{ page.date | date_to_string }} - {{ page.author }}</p> -->
 			{{ content }}
 		</div>
+	{% if site.disqus.shortname %}
+		{% include disqus_comments.html %}
+	{% endif %}
 	</div>
 </body>
 </html>

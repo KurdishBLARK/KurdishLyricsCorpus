@@ -21,9 +21,9 @@
 			<td class="name">{{ post.title }}</td>
 			<td class="performer">{{ post.performer }}</td>
 			<td class="category">{{ post.categories }}</td>
-			<td class="category">{{ post.dialect }}</td>
+			<td class="dialect">{{ post.dialect }}</td>
 			<td class="tags">
-				<a href="{{ post.url | absolute_url }}">text</a>
+				<a href="{{ post.url | relative_url }}">text (audio &#128266;)</a>
 			</td>
 			<!-- <td class="tags">{{ post.tags | array_to_sentence_string }}</td> -->
 		</tr>
@@ -42,5 +42,9 @@ var options = {
 };
 
 var entryList = new List('entry-list', options);
+
+entryList.sort("category", {
+    order: "desc"
+})
 
 </script>
