@@ -17,3 +17,6 @@ disqus:
 
 exclude:
   - else
+
+plugins:
+  - jekyll-sitemap
