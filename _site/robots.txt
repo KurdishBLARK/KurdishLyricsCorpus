@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4000/KurdishLyricsCorpus/sitemap.xml
+Sitemap: https://kurdishblark.github.io/KurdishLyricsCorpus/sitemap.xml
